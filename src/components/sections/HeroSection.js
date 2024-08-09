@@ -26,7 +26,8 @@ export default function HeroSection() {
             src={heroImage}
             width={410}
             height={500}
-            className="absolute h-[500px] w-full rounded-2xl object-cover"
+            alt="Photo of a chief holding a plate full of dishes"
+            className="absolute h-[450px] w-full rounded-2xl object-cover"
           />
         </div>
       </div>

@@ -12,7 +12,7 @@ const navLinksData = [
   {
     id: 3,
     title: "Menu",
-    url: "/#menu",
+    url: "/menu",
   },
   {
     id: 4,

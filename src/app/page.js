@@ -5,7 +5,7 @@ import About from "@/components/sections/About";
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-12">
+    <main className="">
       <HeroSection />
       <Highlights />
       <Testimonials />
