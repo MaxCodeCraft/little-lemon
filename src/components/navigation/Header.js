@@ -1,7 +1,6 @@
-import Image from "next/image";
+import LogoSmall from "../links/LogoSmall";
 import navLinksData from "@/data/navlinksdata";
 import NavLink from "../links/NavLink";
-import logo from "@/assets/images/logo-small.png";
 
 export default function Header() {
   const links = navLinksData.map((link) => {
@@ -11,12 +10,7 @@ export default function Header() {
   return (
     <div className="flex h-24 w-screen items-center justify-center bg-white">
       <div className="flex w-full max-w-5xl items-center justify-between">
-        <Image
-          src={logo}
-          width={210}
-          height={68}
-          alt="Little Lemon restaurant logo"
-        />
+        <LogoSmall />
         {links}
       </div>
     </div>

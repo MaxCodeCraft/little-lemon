@@ -15,6 +15,10 @@ module.exports = {
         highlightLight: "#EDEFEE",
         highlightDark: "#333333",
       },
+      fontFamily: {
+        markazi: ["var(--font-markazi)", "serif"],
+        karla: ["var(--font-karla)", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
