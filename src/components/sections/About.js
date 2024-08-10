@@ -20,7 +20,7 @@ export default function About() {
         </div>
         <div className="w-1/2">
           <Image
-            src={"/test.png"}
+            src={"/static/img/marioadrian.png"}
             width={500}
             height={500}
             alt="Images of the restaurant exterior and the two chiefs"

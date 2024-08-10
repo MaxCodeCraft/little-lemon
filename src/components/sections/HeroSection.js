@@ -1,6 +1,5 @@
 import Image from "next/image";
 import YellowButton from "../buttons/YellowButton";
-import heroImage from "@/assets/images/hero-image.jpg";
 
 export default function HeroSection() {
   return (
@@ -23,7 +22,7 @@ export default function HeroSection() {
         </div>
         <div className="lg:relative lg:w-[40%]">
           <Image
-            src={heroImage}
+            src={"/static/img/hero-image.jpg"}
             width={410}
             height={500}
             alt="Photo of a chief holding a plate full of dishes"
