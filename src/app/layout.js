@@ -25,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${karla.className} ${markaziText.variable}`}>
+      <body className={karla.className}>
         <Header />
         {children}
         <Footer />
@@ -33,3 +33,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+// <body className={`${karla.className} ${markaziText.variable}`}>
