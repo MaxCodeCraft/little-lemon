@@ -9,6 +9,7 @@ export default function LogoSmall() {
         width={210}
         height={63}
         alt="Little Lemon restaurant logo"
+        className="w-[170px] lg:w-[210px]"
       />
     </Link>
   );
