@@ -9,6 +9,7 @@ export default function LogoLarge() {
         width={153}
         height={253}
         alt="Little Lemon restaurant logo"
+        className="hidden lg:block"
       />
     </Link>
   );

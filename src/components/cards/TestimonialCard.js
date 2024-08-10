@@ -35,7 +35,7 @@ export default function TestimonialCard(props) {
           height={112}
           className="h-28 w-28 rounded-full"
         />
-        <p className="w-80">{`"${props.review.slice(0, 150)}"`}</p>
+        <p className="w-72 lg:w-80">{`"${props.review.slice(0, 150)}"`}</p>
       </div>
       <p className="cursor-pointer font-bold underline">{props.username}</p>
     </div>

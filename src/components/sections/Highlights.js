@@ -24,7 +24,9 @@ export default function Highlights() {
           </h3>
           <YellowButton text={"Online Menu"} url={"/menu"} />
         </div>
-        <div className="flex w-full flex-wrap gap-8">{specials}</div>
+        <div className="flex w-full flex-col items-center gap-8 lg:flex-row">
+          {specials}
+        </div>
       </div>
     </div>
   );

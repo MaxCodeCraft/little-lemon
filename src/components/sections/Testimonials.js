@@ -16,7 +16,7 @@ const testimonials = userRatings.map((rating) => {
 export default function Testimonials() {
   return (
     <div className="flex w-screen justify-center bg-primaryGreen py-10">
-      <div className="flex w-full max-w-5xl flex-col items-center gap-8 py-8">
+      <div className="flex w-11/12 flex-col items-center gap-8 py-8 lg:w-full lg:max-w-5xl">
         <h3 className="font-markazi text-5xl text-primaryYellow lg:text-7xl">
           Testimonials
         </h3>

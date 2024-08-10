@@ -14,10 +14,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   return (
-    <div className="flex w-screen justify-center bg-neutral-200 py-16">
-      <div className="flex w-full max-w-5xl justify-between">
+    <div className="flex w-screen justify-center bg-neutral-200 pb-8 lg:py-16">
+      <div className="flex w-11/12 flex-col gap-8 lg:w-full lg:max-w-5xl lg:flex-row lg:justify-between">
         <LogoLarge />
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center gap-4 lg:items-start">
           <h5 className="font-bold underline">Navigation</h5>
           <Link
             href={"/"}
@@ -56,7 +56,7 @@ export default function Footer() {
             Login
           </Link>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center gap-4 lg:items-start">
           <h5 className="font-bold underline">Contact</h5>
           <div className="flex items-start gap-4">
             <FontAwesomeIcon
@@ -87,23 +87,25 @@ export default function Footer() {
             <p>info@littlelemonchicago.com</p>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center gap-4 lg:items-start">
           <h5 className="font-bold underline">Social Medias</h5>
-          <FontAwesomeIcon
-            icon={faFacebook}
-            size="xl"
-            className="w-10 cursor-pointer text-primaryGreen"
-          />
-          <FontAwesomeIcon
-            icon={faInstagram}
-            size="xl"
-            className="w-10 cursor-pointer text-primaryGreen"
-          />
-          <FontAwesomeIcon
-            icon={faTwitter}
-            size="xl"
-            className="w-10 cursor-pointer text-primaryGreen"
-          />
+          <div className="flex lg:flex-col lg:gap-4">
+            <FontAwesomeIcon
+              icon={faFacebook}
+              size="xl"
+              className="w-10 cursor-pointer text-primaryGreen"
+            />
+            <FontAwesomeIcon
+              icon={faInstagram}
+              size="xl"
+              className="w-10 cursor-pointer text-primaryGreen"
+            />
+            <FontAwesomeIcon
+              icon={faTwitter}
+              size="xl"
+              className="w-10 cursor-pointer text-primaryGreen"
+            />
+          </div>
         </div>
       </div>
     </div>
