@@ -1,16 +1,23 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { setGuests } from "@/reducer/reservation";
 
 export default function GuestsInput() {
+  const dispatch = useDispatch();
+  const guests = useSelector((state) => state.reservation.guests);
+
   return (
     <div className="relative w-72">
       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
         <FontAwesomeIcon icon={faUsers} className="text-primaryGreen" />
       </div>
       <select
-        className="block w-full appearance-none rounded-lg bg-gray-100 py-4 pr-8 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none"
+        className="block w-full appearance-none rounded-lg bg-gray-100 py-4 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none"
+        value={guests}
         defaultValue=""
+        onChange={(e) => dispatch(setGuests(e.target.value))}
       >
         <option value="" disabled hidden>
           Number of Guests

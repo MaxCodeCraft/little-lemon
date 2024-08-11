@@ -1,7 +1,7 @@
 "use client";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LogoSmall from "./LogoSmall";
+import LogoSmall from "../links/LogoSmall";
 import navLinksData from "@/data/navlinksdata";
 import NavLink from "../links/NavLink";
 import { useState } from "react";

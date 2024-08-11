@@ -1,7 +1,7 @@
 import LogoSmall from "../links/LogoSmall";
 import navLinksData from "@/data/navlinksdata";
 import NavLink from "../links/NavLink";
-import HamburgerMenu from "../links/HamburgerMenu";
+import HamburgerMenu from "./HamburgerMenu";
 
 const links = navLinksData.map((link) => {
   return <NavLink title={link.title} url={link.url} key={link.id} />;

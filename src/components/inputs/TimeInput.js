@@ -1,15 +1,13 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faClock } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setTime } from "@/reducer/reservation";
 
 export default function TimeInput(props) {
-  const [time, setTime] = useState(null);
+  const dispatch = useDispatch();
+  const time = useSelector((state) => state.reservation.time);
 
-  const handleChange = (event) => {
-    setTime(event.target.value);
-    console.log(event.target.value);
-  };
   return (
     <>
       {props.lunchOrDinner === "lunch" && (
@@ -18,9 +16,9 @@ export default function TimeInput(props) {
             <FontAwesomeIcon icon={faClock} className="text-primaryGreen" />
           </div>
           <select
-            className="block w-full appearance-none rounded-lg bg-gray-100 py-4 pr-8 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none"
+            className="block w-full appearance-none rounded-lg bg-gray-100 py-4 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none"
             defaultValue=""
-            onChange={handleChange}
+            onChange={(e) => dispatch(setTime(e.target.value))}
           >
             <option value="" disabled hidden>
               Time of Lunch
@@ -51,9 +49,9 @@ export default function TimeInput(props) {
             <FontAwesomeIcon icon={faClock} className="text-primaryGreen" />
           </div>
           <select
-            className="block w-full appearance-none rounded-lg bg-gray-100 py-4 pr-8 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none"
+            className="block w-full appearance-none rounded-lg bg-gray-100 py-4 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none"
             defaultValue=""
-            onChange={handleChange}
+            onChange={(e) => dispatch(setTime(e.target.value))}
           >
             <option value="" disabled hidden>
               Time of Dinner
