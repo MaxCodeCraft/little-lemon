@@ -16,18 +16,20 @@ export default function DateInput() {
   const [startDate, setStartDate] = useState(new Date());
 
   return (
-    <div className="relative w-72">
+    <div className="relative w-80">
       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
         <FontAwesomeIcon icon={faCalendarDays} className="text-primaryGreen" />
       </div>
-      <div className="block w-full appearance-none rounded-lg bg-gray-100 py-4 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none">
+      <div
+        className={`${useSelector((state) => state.formerrors.date) && "border-e-4 border-s-4 border-red-500"} block w-full appearance-none rounded-lg bg-highlightLight py-4 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none`}
+      >
         <DatePicker
           selected={startDate}
           onChange={(date) => {
             setStartDate(date);
             dispatch(setDate(date.toDateString()));
           }}
-          className="bg-gray-100 text-center"
+          className="bg-highlightLight text-center"
         />
       </div>
       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4">

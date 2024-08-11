@@ -11,12 +11,12 @@ export default function TimeInput(props) {
   return (
     <>
       {props.lunchOrDinner === "lunch" && (
-        <div className="relative w-72">
+        <div className="relative w-80">
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
             <FontAwesomeIcon icon={faClock} className="text-primaryGreen" />
           </div>
           <select
-            className="block w-full appearance-none rounded-lg bg-gray-100 py-4 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none"
+            className={`${useSelector((state) => state.formerrors.time) && "border-e-4 border-s-4 border-red-500"} block w-full appearance-none rounded-lg bg-highlightLight py-4 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none`}
             defaultValue=""
             onChange={(e) => dispatch(setTime(e.target.value))}
           >
@@ -44,12 +44,12 @@ export default function TimeInput(props) {
         </div>
       )}
       {props.lunchOrDinner === "dinner" && (
-        <div className="relative w-72">
+        <div className="relative w-80">
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
             <FontAwesomeIcon icon={faClock} className="text-primaryGreen" />
           </div>
           <select
-            className="block w-full appearance-none rounded-lg bg-gray-100 py-4 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none"
+            className={`${useSelector((state) => state.formerrors.time) && "border-e-4 border-s-4 border-red-500"} block w-full appearance-none rounded-lg bg-highlightLight py-4 text-center text-xl font-bold text-primaryGreen shadow-lg focus:outline-none`}
             defaultValue=""
             onChange={(e) => dispatch(setTime(e.target.value))}
           >
