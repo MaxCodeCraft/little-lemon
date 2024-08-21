@@ -24,11 +24,6 @@ const navLinksData = [
     title: "Order Online",
     url: "/order-online",
   },
-  {
-    id: 6,
-    title: "Login",
-    url: "/login",
-  },
 ];
 
 export default navLinksData;
